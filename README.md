@@ -24,7 +24,8 @@ correlation <- with(ny, cor(Average.Covered.Charges, Average.Total.Payments))
 model <- lm(formula = Average.Total.Payments ~ Average.Covered.Charges, data = ny)
 par(mfrow = c(1,1), mar=c(4,4,2,1))
 plot(Average.Total.Payments ~ Average.Covered.Charges, data = ny,
-     main="Relationship between covered charges and total payments in NY")
+     main="Relationship between covered charges and total payments in NY",
+     xlab = "Mean covered charges", ylab = "Mean total payments")
 abline(reg = model, lwd = 2)
 legend(x = "bottomright", legend = paste0("correlation=", round(correlation,2)), bty="n")
 ```
