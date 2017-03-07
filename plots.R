@@ -20,7 +20,9 @@ model <- lm(formula = Average.Total.Payments ~ Average.Covered.Charges, data = n
 # Scatterplot
 par(mfrow = c(1,1), mar=c(4,4,2,1))
 plot(Average.Total.Payments ~ Average.Covered.Charges, data = ny,
-     main="Relationship between covered charges and total payments in NY")
+     main="Relationship between covered charges and total payments in NY",
+     xlab = "Mean covered charges ($)", ylab = "Mean total payments ($)",
+     col = rgb(0, 0, 0, 0.5))
 
 # Regression Line annotation
 abline(reg = model, lwd = 2)
